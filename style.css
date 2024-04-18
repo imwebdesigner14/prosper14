@@ -1,0 +1,833 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body > .enq{
+    height: 40px;
+    width: 150px;
+    border: 1px solid black ;
+    background: #1a437a;
+    position: fixed;
+    padding: 10px;
+    color: white;
+    z-index: 99999;
+    top:700px;
+    right: 0px;
+    cursor: pointer;
+   transform: rotate(-90deg);
+
+}
+
+form{
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    border: 2px solid black ;
+    background-color: #1a437a;
+    position: fixed;
+    top: calc(50% - 250px);
+    right: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+    z-index: 999999;
+    
+
+    transform: scale(0);
+    transition: all 0.5s;
+
+
+}
+ form > input{
+    font-size: 25px;
+    padding: 10px;
+ }
+ form > textarea{
+    height: 50px;
+ }
+
+ form > .close{
+    height: 30px;
+    width: 30px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+form > .close::after{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: black ;
+    position: absolute;
+    
+    transform: rotate(45deg);
+    top:15px;
+    right: 2px;
+}
+form > .close::before{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: black ;
+    position: absolute;
+    
+    transform: rotate(-45deg);
+    top:15px;
+    right: 2px;
+}
+
+
+body > .cur{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 99999999999;
+    mix-blend-mode: difference;
+    transform: translate(-50% , -50%);
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* header css starts from here*/
+
+
+
+header{
+    height: 17vh;
+    width: 100%;
+    border: 0.1vh solid black;
+    background-color: white;
+}
+header > nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+}
+header > nav > .logo{
+    
+    width: 50%;
+    font-size: 100px;
+    color: rgba(7, 159, 7, 0.607);
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 25px;
+   
+
+
+}
+header > nav > ul{
+    height: 100%;
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: black ;
+    font-size: 20px;
+    
+}
+
+
+
+/* main header css starts from here */
+
+.main-header{
+    height: 4.5vh ;
+    width: 100%;
+    border: 0.1vh solid black ;
+    background-color: #1a437a;
+    display: flex;
+    
+}
+.main-header > .main-left{
+    height: 100%;
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+
+}
+.main-header > .main-left > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 20px;
+    
+}
+.main-header > .main-left > li > a:hover{
+    background-color: white;
+    color: black;
+} 
+
+
+.main-header > input{
+ border-radius: 10px;
+ height: 35px;
+ width: 300px;
+ position: absolute;
+ right: 180px;
+ top: 172px;
+ padding: 10px;
+ 
+}
+.main-header > .language{
+    list-style: none;
+}
+.main-header > .language > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 15px;
+    position: absolute;
+    right: 20px;
+    top: 160px;
+}
+.main-header > .language > li > a:hover{
+    background-color: white ;
+    color: black;
+}
+/* about-us css starts from here */
+.about-us{
+    height: 800px;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+   
+    background-color: white;
+   
+    
+
+}
+.about-us > .about-box{
+    padding-left:300px;
+    padding-right: 300px;
+    padding-top: 50px;
+    display: flex;
+
+}
+.about-us > .about-box > .about{
+    height: 100%;
+    width: 50%;
+
+}
+.about-us > .about-box > .about > h2{
+    font-size: 50px;
+    font-weight: 800;
+   
+}
+.about-us  > .about-box > .about > p{
+    font-size: 18px;
+    font-family: sans-serif;
+   
+    text-align: start;
+}
+.about-us  > .about-box > .about > ul{
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+}
+.about-us  > .about-box > .about > ul > li > a{
+    font-size: 40px;
+  
+}
+.about-us  > .about-box > .about > ul > li > a > .fa-instagram{
+    color: rgb(208, 53, 79);
+}
+.about-us  > .about-box > .about > ul > li > a > .fa-facebook{
+    color: #1a437a;
+}
+.about-us  > .about-box > .about > ul > li > a > .fa-twitter{
+    color: skyblue;
+}
+.about-us  > .about-box > .about > ul > li > a > .fa-youtube{
+    color: rgba(255, 0, 0, 0.753);
+}
+.about-us  > .about-box > .about > ul > li > a > .fa-linkedin{
+    color: #1a437a;
+}
+
+
+.about-us  > .about-box > .about > ul > li > a > .fa-brands:hover{
+    font-size: 50px;
+    transition: all 1s;
+}
+.about-us > .about-box > .about-uspic > img{
+    height: 400px;
+    width: 430px;
+    margin-left: 50px;
+}
+.about-us > .about-box > .about-uspic > .button{
+   height: 80px;
+   width: 530px;
+  
+    border: 2px solid transparent ;
+    background-color: rgb(9, 154, 9);
+   border-radius: 10px;
+  
+  
+    
+
+}
+.about-us > .about-box > .about-uspic > .button > p{
+    
+    padding: 20px;
+    margin-left: 30px;
+  
+   
+   
+}
+.about-us > .about-box > .about-uspic > .button > p > a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+   
+}
+.about-us > .about-box > .about-uspic > .button:hover{
+    background-color: #1a437a;
+   
+}
+/* products css stats from here */
+
+.product{
+    height:400px;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+    border-top: 1px solid black ;
+    background-color: white;
+}
+.product > .product-box{
+   padding: 50px 300px 0px 300px;
+    display: flex;
+   
+    
+} 
+.product > .product-box > .product-left{
+    height: 100%;
+    width: 50%;
+    
+  
+   
+}
+.product > .product-box > .product-left > h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+.product > .product-box > .product-left >h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+.product > .product-box > .product-left > .p{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+.product > .product-box > .product-left > .product-button{
+    height: 50px;
+    width: 200px;
+    border: 2px solid transparent ;
+    border-radius: 10px;
+    background-color:rgb(9, 154, 9);
+   
+   
+}
+.product > .product-box > .product-left > .product-button > a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+   padding: 2px 0px 2px 40px;
+    
+}
+.product > .product-box > .product-left > .product-button:hover{
+    background-color: #1a437a;
+
+}
+.product > .product-box > .product-right{
+    height: 100%;
+    width: 50%;
+
+}
+.product > .product-box > .product-right > .product-image{
+    height: 300px;
+    width: 600px;
+}
+
+
+
+/* product img css starts from here */
+.product-img{
+    height: 350px;
+    width: 100%;
+    background-color:whitesmoke;
+    flex-flow: column;
+    display: flex;
+  
+}
+.product-img > .box-container{
+    height: 100%;
+    width: 100%;
+    border: 2px solid transparent ;
+    display: flex;
+    align-items: center;
+    column-gap: 200px;
+    margin-left: 210px
+   
+    
+}
+.product-img > .box-container > .imgbox{
+    height: 80%;
+    width: 18%;
+   
+    border-radius: 5px;
+    background-color: white;
+
+  
+}
+
+
+
+
+.product-img > .box-container > .img9{
+    background-image: url(images/999.jpeg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: relative;
+    
+
+    
+}
+
+.product-img > .box-container > .imgbox > a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(14, 173, 14) ;
+    border: 1px solid black ;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    bottom: 10px;
+    margin-left: 20px;
+    
+
+}
+.product-img > .box-container > .imgbox > a:hover{
+    background-color: #1a437a;
+    color: white;
+    
+}
+
+.product-img > .box-container > .img9 > h4{
+    position:absolute;
+    bottom: 50px;
+    left: 20px;
+}
+
+.product-img > .box-container > .img8{
+    background-image: url(images/9999.jpeg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: relative;
+    
+}
+.product-img > .box-container > .img8 > h4{
+    position:absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.product-img > .box-container > .img7{
+    background-image: url(images/99999.jpeg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: relative;
+    
+}
+.product-img > .box-container > .img7 > h4{
+    position:absolute;
+    bottom: 50px;
+    left: 20px;
+}
+/* market css starts from here */
+.main-box{
+    height: 1100px;
+    width: 100%;
+    border: 1px solid transparent ;
+    background-color: white;
+}
+.main-box > h2{
+    font-size: 50px;
+    font-weight: 800;
+   margin-left: 700px;
+   margin-top: 40px;
+}
+
+.main-box > .uper-box{
+    height: 37%;
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    
+   
+
+}
+.main-box > .uper-box > .box1{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/RETAIL-&-E-COMMERCE-172546.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+     
+}
+.main-box > .uper-box > .box1:after{
+   content: '';
+   height: 100%;
+   width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 100%;
+    transition: 0.5s all;
+}
+.main-box > .uper-box > .box1:hover::after{
+    top: 0%;
+}
+
+
+.main-box > .uper-box > .box2{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/SHOPPING-172612.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+.main-box > .uper-box > .box2:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+     background-color: rgba(0,0,0,0.4);
+     position: absolute;
+     top: 100%;
+     transition: 0.5s all;
+ }
+ .main-box > .uper-box > .box2:hover::after{
+     top: 0%;
+ }
+     
+.main-box > .uper-box > .box3{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/MEDICAL-172523.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+.main-box > .uper-box > .box3:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+     background-color: rgba(0,0,0,0.4);
+     position: absolute;
+     top: 100%;
+     transition: 0.5s all;
+ }
+ .main-box > .uper-box > .box3:hover::after{
+     top: 0%;
+ }
+    
+
+
+
+
+
+.main-box > .lower-box{
+    height: 37%;
+    width: 100%;
+     
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+   
+
+}
+.main-box > .lower-box > .box4{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/FOOD-BAG-172455.jpg);
+
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+     
+}
+.main-box > .lower-box > .box4:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+     background-color: rgba(0,0,0,0.4);
+     position: absolute;
+     top: 100%;
+     transition: 0.5s all;
+ }
+ .main-box > .lower-box > .box4:hover::after{
+     top: 0%;
+ }
+.main-box > .lower-box > .box5{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/INDUSTRY-172658.jpg);
+
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+.main-box > .lower-box > .box5:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+     background-color: rgba(0,0,0,0.4);
+     position: absolute;
+     top: 100%;
+     transition: 0.5s all;
+ }
+ .main-box > .lower-box > .box5:hover::after{
+     top: 0%;
+ }
+     
+.main-box > .lower-box > .box6{
+    height: 100%;
+    width: 30%;
+    border: 1px solid black ;
+    background-image: url(images/ARGO-FOOD-172635.jpg);
+    
+    background-position: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   overflow: hidden;
+    
+}
+.main-box > .lower-box > .box6:after{
+    content: '';
+    height: 100%;
+    width: 100%;
+     background-color: rgba(0,0,0,0.4);
+     position: absolute;
+     top: 100%;
+     transition: 0.5s all;
+ }
+ .main-box > .lower-box > .box6:hover::after{
+     top: 0%;
+ }
+/* footer css start from here */
+
+footer{
+    height: 500px;
+    width: 100%;
+    border-bottom: 1px solid black ;
+}
+footer > nav{
+
+    height: 100%;
+    width: 100%;
+    border: 1px solid black ;
+    padding: 50px 300px 50px 300px ;
+    display: flex;
+
+} footer > nav > .form1{
+    height: 100%;
+    width: 30%;
+   
+
+}
+footer > nav > .form1 > h2{
+    font-size: 40px ;
+    font-weight: 800;
+}
+footer > nav > .form1 > ul{
+    list-style: none;
+    
+}
+footer > nav > .form1 > ul > li{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+footer > nav > .form1 > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+
+footer > nav > .form1 > ul > li > a > .fa-instagram{
+    color: rgb(239, 58, 158);
+}
+footer > nav > .form1 > ul > li > a > .fa-facebook{
+    color: #1a437a;
+}
+footer > nav > .form1 > ul > li > a > .fa-twitter{
+    color: aqua;
+}
+footer > nav > .form1 > ul > li > a > .fa-youtube{
+    color: rgba(255, 0, 0, 0.731);
+}
+footer > nav > .form1 > ul > li > a > .fa-linkedin{
+    color: #1a437a;
+}
+footer > nav > .form1 > ul > li > a > .fa-envelope{
+    color: rgba(255, 0, 89, 0.851);
+}
+
+
+
+
+
+
+footer > nav > .form2{
+    height: 100%;
+    width: 30%;
+    margin-left: 150px;
+}
+footer > nav > .form2 > h2{
+    font-size: 40px ;
+    font-weight: 800;
+}
+footer > nav > .form2 > .form2ul{
+    list-style: none;
+   
+}
+
+footer > nav > .form2 > .form2ul > li > a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 300;
+    color: black;
+   
+    
+}
+
+
+footer > nav > .form3{
+    height: 100%;
+    width: 30%;
+    margin-left: 150px;
+}
+footer > nav > .form3 > h2{
+    font-size: 40px ;
+    font-weight: 800;
+}
+footer > nav > .form3 > .form3ul{
+    list-style: none;
+   
+}
+
+footer > nav > .form3 > .form3ul > li > a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 300;
+    color: black;
+   
+    
+}
+
+
+
+
+
+
+/* PRODUCT css start from here  page - 3*/
+section > div > .btn{
+    background-color: rosybrown;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+}
+section > div > .btn:hover{
+    background-color: #1a437a;
+    color: white;
+}
+
+
+section > div > .outer-box{
+   
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+}
+
+section > div > .outer-box > .inner-box{
+    height: 250px;
+    width: 400px;
+    border: 1px solid black ;
+   
+   
+    
+}
+section > div > .outer-box >  .inner-box > img{
+    height: 100%;
+    width: 100%;
+}
